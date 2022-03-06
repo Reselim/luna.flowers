@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>luna</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap" rel="stylesheet"> 
+		
+		<style>
+			html, body {
+				height: 100%;
+				font-family: "Fredoka", sans-serif;
+			}
+
+			.layer {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+			}
+
+			.layer > * {
+				pointer-events: all;
+			}
+
+			body {
+				background: linear-gradient(to top, #383A69, #514D93)
+			}
+
+			/* Layer: Luna */
+
+			.layer-luna {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				user-select: none;
+			}
+
+			@keyframes float {
+				from { transform: translateY(-5%) };
+				to { transform: translateY(5%) };
+			}
+
+			.luna {
+				width: 90%;
+				height: 70%;
+				object-fit: contain;
+				animation: float 5s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+			}
+
+			/* Layer: Credit */
+
+			.layer-credit {
+				display: flex;
+				align-items: flex-end;
+				justify-content: start;
+			}
+
+			.credit {
+				margin: 2rem;
+				font-size: 1rem;
+			}
+
+			.credit, .credit a {
+				color: white;
+			}
+
+			/* Layer: Social */
+
+			.layer-social {
+				display: flex;
+				align-items: flex-end;
+				justify-content: end;
+			}
+
+			.social {
+				margin: 2rem;
+			}
+
+			.social img {
+				height: 2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layer layer-luna">
+			<img
+				class="luna"
+				title="luna"
+
+				src="luna@1x.png"
+				srcset="
+					luna@1x.png 1510w,
+					luna@2x.png 3020w,
+					luna@3x.png 4530w
+				"
+
+				alt="
+					Illustrated picture of an anthropomorphic cat.
+					Character has white fur, with lavender and purple accents.
+					Character has long, periwinkle hair that fades to purple near the bottom. There is a purple water lily on her hair.
+					Character is wearing pastel pink striped thigh-high socks, a pastel blue shirt with a crescent moon on it, and a purple collar with a golden bell.
+					Character is depicted weightlessly floating.
+				"
+			>
+		</div>
+
+		<div class="layer layer-credit">
+			<span class="credit">
+				illustrated by <a href="https://twitter.com/tsrdtn">Hoshiro</a>
+			</span>
+		</div>
+
+		<div class="layer layer-social">
+			<div class="social">
+				<a href="https://twitter.com/meowatthestars">
+					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDggMjA0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNMjIyIDUxdjdjMCA2Ny01MSAxNDQtMTQ0IDE0NHYtMWMtMjcgMS01NC03LTc3LTIyYTEwMyAxMDMgMCAwIDAgNzUtMjFjLTIyLTEtNDEtMTUtNDctMzUgNyAxIDE1IDEgMjItMS0yMy01LTQwLTI1LTQwLTUwIDcgNCAxNSA2IDIzIDZhNTEgNTEgMCAwIDEtMTYtNjdjMjYgMzEgNjQgNTAgMTA0IDUyYTUxIDUxIDAgMCAxIDg2LTQ2YzEyLTIgMjItNiAzMi0xMi0zIDEyLTExIDIyLTIyIDI4IDEwLTEgMjAtNCAyOS04LTcgMTAtMTUgMTktMjUgMjZ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+" />
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
